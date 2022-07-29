@@ -3,7 +3,6 @@ import React, { useState} from 'react';
 export default function CheckBox(props){
     const [knowJava,setKnowJava] = useState('');
     const [knowReact,setKnowReact] = useState('');
-    const [knowNothing,setknowNothing]=useState('');
 
     return (
         <div>
@@ -16,15 +15,8 @@ export default function CheckBox(props){
                 <input type="CheckBox" checked={knowReact?true:false} onChange={(e)=>setKnowReact(e.target.checked?'ReactJS':'')}></input>
                 ReactJS
             </label>
-            <label>
-                <input type="CheckBox" checked={knowReact?true:false} onChange={(e)=>setKnowReact(e.target.checked?'ReactJS':'')}></input>
-                ReactJS
-            </label>
             
             <small>Skills: {knowJava},{knowReact}</small>
         </div>
     )
 }
-
-// git config --global user.email "you@example.com"
-//   git config --global user.name "Your Name"
